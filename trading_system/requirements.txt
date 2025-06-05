@@ -1,0 +1,5 @@
+django
+djangorestframework
+yfinance
+dotenv
+psycopg2-binary

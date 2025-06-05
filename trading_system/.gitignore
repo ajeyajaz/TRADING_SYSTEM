@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.egg
+*.egg-info/
+dist/
+build/
+*.manifest
+*.spec
+
+# Django specific
+*.log
+*.pot
+*.pyc
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+static_root/
+local_settings.py
+
+# Environment
+venv
+# VSCode
+.vscode/
+
+
+
+# IDEs
+.idea/
+*.swp
+
+
+# Migrations (optional, depending on workflow)
+**/migrations/*.py
+!**/migrations/__init__.py
