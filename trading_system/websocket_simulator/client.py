@@ -34,6 +34,6 @@ async def process_messages():
                     if old_price > 0:
                         percent_change = ((price - old_price) / old_price) * 100
                         if percent_change > 2:
-                            print(f"[ALERT] {ticker} price increased by {percent_change:.2f}% within 2 minutes!")
+                            print(f"[ALERT] {ticker} price increased by {percent_change:.2f}% within 1 minutes!")
 
 asyncio.run(process_messages())
