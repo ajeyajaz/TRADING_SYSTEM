@@ -21,7 +21,7 @@ async def process_messages():
                 else:
                     price_history[ticker].append((timestamp, price))
 
-                cutoff = timestamp - timedelta(minutes=2)
+                cutoff = timestamp - timedelta(minutes=1)
 
                 # remove outdated entry
                 while price_history[ticker] and price_history[ticker][0][0] < cutoff:
@@ -33,7 +33,7 @@ async def process_messages():
                     old_price = price_history[ticker][0][1]
                     if old_price > 0:
                         percent_change = ((price - old_price) / old_price) * 100
-                        if percent_change >= 2:
+                        if percent_change > 2:
                             print(f"[ALERT] {ticker} price increased by {percent_change:.2f}% within 2 minutes!")
 
 asyncio.run(process_messages())
